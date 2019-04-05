@@ -24,7 +24,7 @@ class TestUser(TestCase):
         self.assertTrue(self.testuser in User.objects.all())
 
     def test_save_profile(self):
-        self.fuser = User(username="fuser", email="cuser@mail.com")
+        self.fuser = User(username="fuser", email="carineuser@mail.com")
         self.fuser.save()
 
 
