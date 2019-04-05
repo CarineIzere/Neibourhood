@@ -1,0 +1,47 @@
+
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+{{block.super}}
+
+<div class="wrapper">
+    <div class="page">
+        <div class="page-inner">
+            <div class="page-section row ">
+                <div class="col-md-2"></div>
+                <!-- .masonry-item -->
+                <div class="masonry-item col-md-8 ">
+                    <!-- .card -->
+                    <section class="card card-fluid">
+                            <!-- new hood form -->
+                            <form action="{% url 'new_hood' %}" method="POST" enctype="multipart/form-data"  role="dialog" aria-labelledby="hood-add-modal" >
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div style="background-color:#00897b" class="modal-header">
+                                            <h5 class="modal-title text-center" style="color:aliceblue;text-align: center;">NEW HUD</h5>
+                                        </div>
+                                        <!--end of modal head-->
+                                        <div class="modal-body">
+                                            <!-- forms here -->
+                                            {% csrf_token %}
+                                            {% bootstrap_form hood_form %}
+                                        </div>
+                                        <!--end of modal body-->
+                                        <div class="modal-footer">
+                                            <button role="button" class="btn " type="submit">
+                                              submit
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- end of new hood form -->
+                    </section>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

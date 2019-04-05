@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+
+{% block content %}
+{{block.super}}
+
+<div class="wrapper">
+    <div class="page">
+        <div class="page-inner">
+            <div class="page-section row ">
+
+                <div class="col-md-2"></div>
+
+                <div class="masonry-item col-md-8 ">
+                    <section class="card card-fluid">
+                        <div class="card-body text-center">
+                            <h3 class="card-title text-truncate">
+                                {{ hood.name|upper }}
+                            </h3>
+                            <h5 class="card-subtitle text-muted mb-3"> {{ email }} </h5>
+                            <h5 class="card-subtitle text-muted mb-3"> {{ hood.city }} </h5>
+                            <section class="card card-fluid">
+                                <!-- .card-body -->
+                                <div class="card-body">
+
+                                    <h5 class="card-title">{{ neighbors.count }} Members Online </h5>
+                                    {% for neighbours in neighbors %}
+                                    <figure class="user-avatar user-avatar-lg dropdown">
+                                        <div class="dropdown-menu">
+                                            <a href="/member/{{ neighbours.user.username }}" class="dropdown-item">Online</a>
+                                        </div>
+                                    </figure>
+                                    {% endfor %}
+
+                                </div>
+                            </section>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

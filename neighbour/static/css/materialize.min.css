@@ -1,0 +1,33 @@
+h5 {
+    color: green;
+}
+
+.figure-img{
+    text-align: center;
+}
+
+.center{
+    text-align: center;
+}
+
+.cliff{
+    padding-right: 30px;
+}
+
+
+h6{
+    background-color: whitesmoke;
+}
+
+.neighbour{
+    color:#fafafa;
+}
+
+.card-panel{
+    justify-content: center;
+
+}
+
+.container-fluid{
+    justify-content: center;
+}
