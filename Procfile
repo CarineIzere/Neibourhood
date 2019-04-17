@@ -1,2 +1,1 @@
-
 web: gunicorn neyi.wsgi
