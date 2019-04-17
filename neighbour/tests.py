@@ -43,8 +43,6 @@ class ProfileTestClass(TestCase):
         profiles = Profile.objects.all()
         self.assertTrue(len(profiles) > 0)
 
-
-
 class ProjecTestClass(TestCase):
     """  
     Tests Project class and its functions
