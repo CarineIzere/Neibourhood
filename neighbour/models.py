@@ -16,7 +16,6 @@ class Neighborhood (models.Model):
     admin = models.ForeignKey(User , on_delete=models.CASCADE, related_name='hood_admin' , null=True , blank= True)
     occupants = models.ManyToManyField(User , related_name='hood_occupants', blank=True)
 
-
     def __str__(self):
         return self.name
 
